@@ -3,9 +3,8 @@
 //! function.
 
 fn main() {
-    let s0 = String::new();
-
-    let mut s1 = create_string(s0);
+    // Create s1 using the create_string function
+    let mut s1 = create_string();
 
     println!("{} == `{}`", stringify!(s1), s1);
 
@@ -14,9 +13,9 @@ fn main() {
     println!("{} == `{}`", stringify!(s1), s1);
 }
 
-///`create_string()` no longer takes `s: String` as argument
+/// `create_string()` creates and returns a new `String`
 fn create_string() -> String {
-    let mut s = s;
+    let s = String::from("Hello");
 
     s
 }
